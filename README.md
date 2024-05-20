@@ -42,6 +42,8 @@ The video input will be recorded using cv2 in order to utilise the MediaPipe Pos
 Then, as long as the camera is on or the video is playing, the programme will continuously read the frames from the video input. MediaPipe Pose will then process each frame one after the other to obtain the landmarks.
 But before users can view and compare, the camera and video inputs must be visualised. The Red-Green-Blue in the pictures will need to be rearranged because it is actually in the Blue-Green-Red sequence. Additionally, the video will be mirrored for a better visualisation experience because the camera or video feed is not mirrored.
 
+![Image Mediapipe Pose Landmark Map](https://camo.githubusercontent.com/54e5f06106306c59e67acc44c61b2d3087cc0a6ee7004e702deb1b3eb396e571/68747470733a2f2f6d65646961706970652e6465762f696d616765732f6d6f62696c652f706f73655f747261636b696e675f66756c6c5f626f64795f6c616e646d61726b732e706e67)
+
 After processing this feed will be fed to Google Media Pipe, that will make use of the minimum detection and tracking confidence to perform pose estimation by calling the required methods from the pose() class.
 The individual can typically be located using the Nose, which is the "landmark 0," which is returned by MediaPipe stance along with a stance prediction based on 33 landmarks. Using the posture landmark submodule, Google MediaPipe displayed the pose landmark graph. Cross-platform settings, such as static picture mode, model complexity, minimum detection confidence, and minimum tracking confidence, are provided by Google MediaPipe Pose and may be applied in many scenarios. For picture input, the static image mode may be turned on; for video stream inputs, it can be turned off.
 
@@ -50,79 +52,55 @@ The model's level of confidence in detecting and tracking the input is determine
 The landmarks will be determined on the body of the user and displayed as live feed on the monitor. Then the user can perform the required yoga pose. A trigonometric function has been prepared that takes any three points as input and calculated the angles between them using the arctan2 function. During the training and the testing phase the angles formed by a certain set of points will be calculated to be used during the dynamic implementation.
 While the user performs the yoga pose, the angles formed by the body points that are specifically required for this yoga will be displayed next to the point in the output. If the user is able to correctly perform the yoga, then “OK” will be displayed, otherwise, a sound alert will be triggered to make the user aware that he is out of form. Along with this, the confidence score will also be displayed so that the user can understand what percent of the 32 body points are being captured by the frame.
 
-![Video transcription/translaftion app](https://developer.ibm.com/developer/tutorials/cfc-starter-kit-speech-to-text-app-example/images/cfc-covid19-remote-education-diagram-2.png)
-![image](https://github.com/RajAdwaita/Capstone_Project/assets/76047644/48cc3d6b-176d-4a67-9734-8ff0e8e70c92)
+
+
+![image](https://github.com/RajAdwaita/Capstone_Project/assets/76047644/4007d4df-1e80-41d3-9c68-b3a0315b6f4a)
 
 
 More detail is available in our [description document](./docs/DESCRIPTION.md).
 
 ## Technology implementation
 
-### IBM watsonx product(s) used
+### Google Mediapipe 
+A computer vision system using Google's MediaPipe technology for rehabilitation and training requires detailed technical specifications covering technologies, hardware requirements, software specifications, user interaction, and expected functionalities. In this section the requirements, technical , economic and social feasibility have been discussed. This comprehensive breakdown is essential for the project's success. In order to guarantee high accuracy, an excellent user experience, real-time performance, and dependability, the paper explores both functional and non-functional needs. The feasibility assessment confirms the project's viability and revolutionary potential by addressing its technical, economic, and social components. Along with standards and procedures to guarantee adherence to data protection and healthcare legislation, comprehensive hardware and software specifications are offered to steer development.
 
-_INSTRUCTIONS: Included here is a list of IBM watsonx products. Remove any products you did not use. Leave only those included in your solution code. In your official submission on the Call for Code Global Challenge web site, you are required to provide details on where and how you used each IBM watsonx product so judges can review your implementation. Remove these instructions._
+#### System Specification 
+##### Hardware 
+- Hardware for the system, such as cameras that can record clear video feeds for posture recognition and correction, is needed.
+- Moreover, in order to execute the posture detection model and furnish the user with immediate feedback, computing devices possessing adequate processing capabilities are essential.
+- System Requirement: Operating System: Windows 11, CPU: Intel(R) Core(TM) i7-10750H CPU @ 2.60GHz, RAM: 24 GB, and GPU: NVIDIA GeForce GTX 1650 Ti.
+- High resolution webcam or integrated camera capable of capturing at least 720p video at 30 FPS.
 
-**Featured watsonx products**
+##### Software
+- The creation of the posture detection and correction algorithm utilising machine learning methods and the MediaPipe architecture is part of the software specs.
+- To enable communication between the user and the system, an intuitive user interface must be created and put into use.
+- Software Requirements : python >=3.8.0, mediapipe 0.8.9.1, opencv-python 4.5.5.62, pandas 1.4.1, and scikit-learn 1.0.2.
+- Development Environment - PyCharm, Visual Studio Code, or any python supportive IDE.
 
-- [watsonx.ai](https://www.ibm.com/products/watsonx-ai) - WHERE AND HOW THIS IS USED IN OUR SOLUTION
+## Design 
 
-- [watsonx.governance](https://www.ibm.com/products/watsonx-governance) - WHERE AND HOW THIS IS USED IN OUR SOLUTION
+### System Architecture 
+![image](https://github.com/RajAdwaita/Capstone_Project/assets/76047644/c413c065-5682-406c-8be4-d10306f52c78)
 
-- [watsonx Assistant](https://cloud.ibm.com/catalog/services/watsonx-assistant) - WHERE AND HOW THIS IS USED IN OUR SOLUTION
+### Data Flow Diagram
+![image](https://github.com/RajAdwaita/Capstone_Project/assets/76047644/85e9a147-d6b9-448c-ae7c-ac92b66b4672)
 
-### Other IBM technology used
+### Sequence Diagram 
+![image](https://github.com/RajAdwaita/Capstone_Project/assets/76047644/2982637f-1af4-423e-9ad7-f9b855306d88)
 
-INSTRUCTIONS: List any other IBM technology or IBM AI services used in your solution and describe how each component was used. If you can provide details on where these were used in your code, that would help the judges review your submission.
-
-**Additional IBM AI services (Remove any that you did not use)**
-
-- [Watson Machine Learning](https://cloud.ibm.com/catalog/services/watson-machine-learning) - WHERE AND HOW THIS IS USED IN OUR SOLUTION
-
-- [Watson Studio](https://cloud.ibm.com/catalog/services/watson-studio) - WHERE AND HOW THIS IS USED IN OUR SOLUTION
-
-- [Natural Language Understanding](https://cloud.ibm.com/catalog/services/natural-language-understanding) - WHERE AND HOW THIS IS USED IN OUR SOLUTION
-
-- [Speech to Text](https://cloud.ibm.com/catalog/services/speech-to-text) - WHERE AND HOW THIS IS USED IN OUR SOLUTION
-
-- [Text to Speech](https://cloud.ibm.com/catalog/services/text-to-speech) - WHERE AND HOW THIS IS USED IN OUR SOLUTION
-
-- [Language Translator](https://cloud.ibm.com/catalog/services/language-translator) - WHERE AND HOW THIS IS USED IN OUR SOLUTION
-
-### Solution architecture
-
-REPLACE THIS EXAMPLE WITH YOUR OWN, OR REMOVE THIS EXAMPLE
-
-Diagram and step-by-step description of the flow of our solution:
-
-![Video transcription/translaftion app](https://developer.ibm.com/developer/tutorials/cfc-starter-kit-speech-to-text-app-example/images/cfc-covid19-remote-education-diagram-2.png)
-
-1. The user navigates to the site and uploads a video file.
-2. Watson Speech to Text processes the audio and extracts the text.
-3. Watson Translation (optionally) can translate the text to the desired language.
-4. The app stores the translated text as a document within Object Storage.
-
-## Presentation materials
-
-_INSTRUCTIONS: The following deliverables should be officially posted to your My Team > Submissions section of the [Call for Code Global Challenge resources site](https://cfc-prod.skillsnetwork.site/), but you can also include them here for completeness. Replace the examples seen here with your own deliverable links._
-
-### Solution demo video
-
-[![Watch the video](https://raw.githubusercontent.com/Liquid-Prep/Liquid-Prep/main/images/readme/IBM-interview-video-image.png)](https://youtu.be/vOgCOoy_Bx0)
-
-### Project development roadmap
-
-The project currently does the following things.
-
-- Feature 1
-- Feature 2
-- Feature 3
-
-In the future we plan to...
-
-See below for our proposed schedule on next steps after Call for Code 2024 submission.
-
-![Roadmap](./images/roadmap.jpg)
-
+## Modules
+### Module - 1
+ - Capturing Frames through Dynamic/Manual Input
+ - Segmentation
+ - Converting frames to RGB
+### Module - 2
+- Acquiring landmarks using Media Pipe
+- Drawing Landmark and connections on the video Feed
+- Checking body pinpoint offset
+- Calculating angles between reference points
+-   ![image](https://github.com/RajAdwaita/Capstone_Project/assets/76047644/1d55b1cf-d8a0-461d-be96-bec702335b0d)
+### Module - 3
+- Decision Making
 ## Additional details
 
 _INSTRUCTIONS: The following deliverables are suggested, but **optional**. Additional details like this can help the judges better review your solution. Remove any sections you are not using._
