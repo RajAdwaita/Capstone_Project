@@ -57,7 +57,7 @@ While the user performs the yoga pose, the angles formed by the body points that
 ![image](https://github.com/RajAdwaita/Capstone_Project/assets/76047644/4007d4df-1e80-41d3-9c68-b3a0315b6f4a)
 
 
-More detail is available in our [description document](./docs/DESCRIPTION.md).
+More detail is available in the [FINAL REPORT](Review_3_Docs/20BKT0095_VL2023240505810_PE005.pdf).
 
 ## Technology implementation
 
@@ -65,13 +65,16 @@ More detail is available in our [description document](./docs/DESCRIPTION.md).
 A computer vision system using Google's MediaPipe technology for rehabilitation and training requires detailed technical specifications covering technologies, hardware requirements, software specifications, user interaction, and expected functionalities. In this section the requirements, technical , economic and social feasibility have been discussed. This comprehensive breakdown is essential for the project's success. In order to guarantee high accuracy, an excellent user experience, real-time performance, and dependability, the paper explores both functional and non-functional needs. The feasibility assessment confirms the project's viability and revolutionary potential by addressing its technical, economic, and social components. Along with standards and procedures to guarantee adherence to data protection and healthcare legislation, comprehensive hardware and software specifications are offered to steer development.
 
 #### System Specification 
+
 ##### Hardware 
+
 - Hardware for the system, such as cameras that can record clear video feeds for posture recognition and correction, is needed.
 - Moreover, in order to execute the posture detection model and furnish the user with immediate feedback, computing devices possessing adequate processing capabilities are essential.
 - System Requirement: Operating System: Windows 11, CPU: Intel(R) Core(TM) i7-10750H CPU @ 2.60GHz, RAM: 24 GB, and GPU: NVIDIA GeForce GTX 1650 Ti.
 - High resolution webcam or integrated camera capable of capturing at least 720p video at 30 FPS.
 
 ##### Software
+
 - The creation of the posture detection and correction algorithm utilising machine learning methods and the MediaPipe architecture is part of the software specs.
 - To enable communication between the user and the system, an intuitive user interface must be created and put into use.
 - Software Requirements : python >=3.8.0, mediapipe 0.8.9.1, opencv-python 4.5.5.62, pandas 1.4.1, and scikit-learn 1.0.2.
@@ -80,20 +83,28 @@ A computer vision system using Google's MediaPipe technology for rehabilitation 
 ## Design 
 
 ### System Architecture 
+
 ![image](https://github.com/RajAdwaita/Capstone_Project/assets/76047644/c413c065-5682-406c-8be4-d10306f52c78)
 
 ### Data Flow Diagram
+
 ![image](https://github.com/RajAdwaita/Capstone_Project/assets/76047644/85e9a147-d6b9-448c-ae7c-ac92b66b4672)
 
 ### Sequence Diagram 
+
 ![image](https://github.com/RajAdwaita/Capstone_Project/assets/76047644/2982637f-1af4-423e-9ad7-f9b855306d88)
 
 ## Modules
+
 ### Module - 1
+
  - Capturing Frames through Dynamic/Manual Input
  - Segmentation
  - Converting frames to RGB
+
+   
 ### Module - 2
+
 - Acquiring landmarks using Media Pipe
 - Drawing Landmark and connections on the video Feed
 - Checking body pinpoint offset
@@ -102,38 +113,49 @@ A computer vision system using Google's MediaPipe technology for rehabilitation 
      ![image](https://github.com/RajAdwaita/Capstone_Project/assets/76047644/1d55b1cf-d8a0-461d-be96-bec702335b0d)
   
 ### Module - 3
+
 - Decision Making
 
 
 ## Testing
 
 ### Unit - Testing
+
 - Video Capture Feed
-- 
+  
     ![image](https://github.com/RajAdwaita/Capstone_Project/assets/76047644/2e2cfc0d-232f-41da-87a6-96e0426cf0aa)
+  
 - Drawing landmark map on the body
 
     ![image](https://github.com/RajAdwaita/Capstone_Project/assets/76047644/48efcfed-9c4f-4b92-92cf-b29432bc0634)
+  
 - Draw the landmark map on a 3-D plane
 
     ![image](https://github.com/RajAdwaita/Capstone_Project/assets/76047644/ccacf309-2c9d-4724-b866-822477d56974)
+  
 ### Integration Testing
+
 - Calculating angles at the joints
   
     ![image](https://github.com/RajAdwaita/Capstone_Project/assets/76047644/0e6d1de7-72ef-4326-a687-8319c40343fa)
+  
 - Testing the model
 
 
 ## Results and Discussions
+
 ### Confusion Matrix 
+
 ![image](https://github.com/RajAdwaita/Capstone_Project/assets/76047644/6459a756-70fc-45f6-a7c7-3ad555aeef5b)
 
 
 ### Correct Pose for Adho Mukha Savasana
+
 ![image](https://github.com/RajAdwaita/Capstone_Project/assets/76047644/9d9cab40-f90a-4597-a329-eee3f8045089)
 
 
 ### Incorrect Pose for Adho Mukha Savasana
+
 ![image](https://github.com/RajAdwaita/Capstone_Project/assets/76047644/90e28106-442a-496c-acd6-eb551ba6d267)
 
 
