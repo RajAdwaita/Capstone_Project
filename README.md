@@ -98,49 +98,68 @@ A computer vision system using Google's MediaPipe technology for rehabilitation 
 - Drawing Landmark and connections on the video Feed
 - Checking body pinpoint offset
 - Calculating angles between reference points
--   ![image](https://github.com/RajAdwaita/Capstone_Project/assets/76047644/1d55b1cf-d8a0-461d-be96-bec702335b0d)
+
+     ![image](https://github.com/RajAdwaita/Capstone_Project/assets/76047644/1d55b1cf-d8a0-461d-be96-bec702335b0d)
+  
 ### Module - 3
 - Decision Making
-## Additional details
 
-_INSTRUCTIONS: The following deliverables are suggested, but **optional**. Additional details like this can help the judges better review your solution. Remove any sections you are not using._
+
+## Testing
+
+### Unit - Testing
+- Video Capture Feed
+- 
+    ![image](https://github.com/RajAdwaita/Capstone_Project/assets/76047644/2e2cfc0d-232f-41da-87a6-96e0426cf0aa)
+- Drawing landmark map on the body
+
+    ![image](https://github.com/RajAdwaita/Capstone_Project/assets/76047644/48efcfed-9c4f-4b92-92cf-b29432bc0634)
+- Draw the landmark map on a 3-D plane
+
+    ![image](https://github.com/RajAdwaita/Capstone_Project/assets/76047644/ccacf309-2c9d-4724-b866-822477d56974)
+### Integration Testing
+- Calculating angles at the joints
+  
+    ![image](https://github.com/RajAdwaita/Capstone_Project/assets/76047644/0e6d1de7-72ef-4326-a687-8319c40343fa)
+- Testing the model
+
+
+## Results and Discussions
+### Confusion Matrix 
+![image](https://github.com/RajAdwaita/Capstone_Project/assets/76047644/6459a756-70fc-45f6-a7c7-3ad555aeef5b)
+
+
+### Correct Pose for Adho Mukha Savasana
+![image](https://github.com/RajAdwaita/Capstone_Project/assets/76047644/9d9cab40-f90a-4597-a329-eee3f8045089)
+
+
+### Incorrect Pose for Adho Mukha Savasana
+![image](https://github.com/RajAdwaita/Capstone_Project/assets/76047644/90e28106-442a-496c-acd6-eb551ba6d267)
+
 
 ### How to run the project
 
-INSTRUCTIONS: In this section you add the instructions to run your project on your local machine for development and testing purposes. You can also add instructions on how to deploy the project in production.
+- Go To the Code_Base Folder
+- Open the DEMO_MEDIAPIPE-FINAL file in an IDE that supports python
+- Check that the path of the Audio file is set correctly
+- Run the code line by line.
+- In case any package / library is not installed, `!pip install (package_name)`
+- If webcam permission is not enabled, enable it.
+- Once the opening Page pops us, select the options and perform the Yoga pose to obtain the results.
+  ![image](https://github.com/RajAdwaita/Capstone_Project/assets/76047644/c86761a2-dce0-42e2-a044-bcad84020513)
+
+
+
+
+
 
 ### Live demo
 
-You can find a running system to test at...
-
-See our [description document](./docs/DESCRIPTION.md) for log in credentials.
-
----
-
-_INSTRUCTIONS: You can remove the below section from your specific project README._
-
-## About this template
-
-### Contributing
-
-Please read [CONTRIBUTING.md](CONTRIBUTING.md) for details on our code of conduct, and the process for submitting pull requests to us.
-
-### Versioning
-
-We use [SemVer](http://semver.org/) for versioning. For the versions available, see the [tags on this repository](https://github.com/your/project/tags).
 
 ### Authors
 
-<a href="https://github.com/Call-for-Code/Project-Sample/graphs/contributors">
-  <img src="https://contributors-img.web.app/image?repo=Call-for-Code/Project-Sample" />
+<a href="https://github.com/RajAdwaita">
+  ADWAITA RAJ MODAK
 </a>
 
-- **Billie Thompson** - _Initial work_ - [PurpleBooth](https://github.com/PurpleBooth)
 
-### License
-
-This project is licensed under the Apache 2 License - see the [LICENSE](LICENSE) file for details.
-
-### Acknowledgments
-
-- Based on [Billie Thompson's README template](https://gist.github.com/PurpleBooth/109311bb0361f32d87a2).
